@@ -1,61 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="mihaescu = sofer.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PizdaProduction</title>
-    <style>
-        body {
-            margin: 0;
-            background-color: #000;
-            color: white;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .text_size {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-        video {
-            max-width: 90vw;
-            max-height: 80vh;
-            width: auto;
-            height: auto;
-        }
-        .video-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        .video-title {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-    </style>
-</head>
-<body>
-    <p class="text_size">PizdaProduction</p>
+<meta charset="UTF-8">
+<link rel="icon" type="image/jpeg" href="mihaescu = sofer.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PizdaProduction</title>
 
-    <div class="video-section">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#000,#111,#1a1a1a);
+    font-family:Arial,Helvetica,sans-serif;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.logo{
+    font-size:3rem;
+    font-weight:900;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:40px;
+    text-shadow:0 0 20px rgba(255,255,255,0.4);
+}
+
+.video-container{
+    width:100%;
+    max-width:1000px;
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+.video-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:20px;
+    backdrop-filter:blur(12px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.5);
+    transition:all 0.3s ease;
+}
+
+.video-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 50px rgba(255,255,255,0.08);
+}
+
+video{
+    width:100%;
+    display:block;
+    border-radius:12px;
+    background:black;
+}
+
+.footer{
+    margin-top:50px;
+    color:#888;
+    font-size:14px;
+    text-align:center;
+}
+
+@media(max-width:768px){
+    .logo{
+        font-size:2rem;
+        text-align:center;
+    }
+
+    .video-card{
+        padding:12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="logo">PizdaProduction</h1>
+
+<div class="video-container">
+
+    <div class="video-card">
         <video autoplay controls>
             <source src="mihaescu = femboy.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 
-    <div class="video-section">
-        <p class="video-title">Roberto Video</p>
+    <div class="video-card">
         <video controls>
             <source src="RobertoVideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 
+</div>
+
+<div class="footer">
+    © 2026 PizdaProduction
+</div>
+
 </body>
 </html>
+```
